@@ -25,11 +25,11 @@ export const Route = createFileRoute("/")({
         content:
           "Check password strength in real time with entropy, crack-time estimates, pattern detection and a secure generator. Everything runs offline in your browser.",
       },
-      { property: "og:title", content: "Password Strength Checker" },
+      { property: "og:title", content: "Password Strength Checker — Analyse & Generate Secure Passwords" },
       {
         property: "og:description",
         content:
-          "Real-time password analysis, entropy scoring, crack-time estimates and a strong password generator — fully client-side.",
+          "Check password strength in real time with entropy, crack-time estimates, pattern detection and a secure generator. Everything runs offline in your browser.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

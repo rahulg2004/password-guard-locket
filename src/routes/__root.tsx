@@ -78,14 +78,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Password Strength Checker" },
-      { name: "description", content: "Analyse password strength in real time, entirely in your browser." },
+      { title: "Password Strength Checker — Analyse & Generate Secure Passwords" },
+      { name: "description", content: "Check password strength in real time with entropy, crack-time estimates, pattern detection and a secure generator. Everything runs offline in your browser." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Password Strength Checker" },
-      { property: "og:description", content: "Analyse password strength in real time, entirely in your browser." },
+      { property: "og:title", content: "Password Strength Checker — Analyse & Generate Secure Passwords" },
+      { property: "og:description", content: "Check password strength in real time with entropy, crack-time estimates, pattern detection and a secure generator. Everything runs offline in your browser." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Password Strength Checker — Analyse & Generate Secure Passwords" },
+      { name: "twitter:description", content: "Check password strength in real time with entropy, crack-time estimates, pattern detection and a secure generator. Everything runs offline in your browser." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e993de30-82f7-44c2-aaab-6f0bca5b2990/id-preview-b4f5ff0b--0fde7558-1c15-4214-b694-c6be968b09cc.lovable.app-1785856318643.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e993de30-82f7-44c2-aaab-6f0bca5b2990/id-preview-b4f5ff0b--0fde7558-1c15-4214-b694-c6be968b09cc.lovable.app-1785856318643.png" },
     ],
     links: [
       {
