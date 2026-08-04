@@ -226,7 +226,7 @@ function randomInt(max: number): number {
   if (typeof crypto !== "undefined" && crypto.getRandomValues) {
     const arr = new Uint32Array(1);
     crypto.getRandomValues(arr);
-    return arr[0] % max;
+    return (arr[0] ?? 0) % max;
   }
   return Math.floor(Math.random() * max);
 }
@@ -249,7 +249,7 @@ export function generatePassword(options: GeneratorOptions): string {
         .join("");
     if (s.length) {
       pool += s;
-      required.push(s[randomInt(s.length)]);
+      required.push(s[randomInt(s.length)]!);
     }
   };
 
@@ -263,11 +263,11 @@ export function generatePassword(options: GeneratorOptions): string {
   }
 
   const chars = [...required];
-  while (chars.length < options.length) chars.push(pool[randomInt(pool.length)]);
+  while (chars.length < options.length) chars.push(pool[randomInt(pool.length)]!);
 
   for (let i = chars.length - 1; i > 0; i--) {
     const j = randomInt(i + 1);
-    [chars[i], chars[j]] = [chars[j], chars[i]];
+    [chars[i], chars[j]] = [chars[j]!, chars[i]!];
   }
   return chars.slice(0, options.length).join("");
 }
